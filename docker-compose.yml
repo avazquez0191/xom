@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ui:
+    build: ./xom-ui
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./xom-ui:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true # Enables file watching inside Docker
+    command: ["npm", "run", "dev"]
