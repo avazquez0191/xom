@@ -20,3 +20,4 @@ services:
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true # Enables file watching inside Docker
+    restart: unless-stopped

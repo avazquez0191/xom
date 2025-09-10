@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Docker",
+      "type": "node",
+      "request": "attach",
+      "address": "localhost",
+      "port": 5000,
+      "localRoot": "${workspaceFolder}/xom-server/src",
+      "remoteRoot": "/app/src",
+      "restart": true
+    }
+  ]
+}
